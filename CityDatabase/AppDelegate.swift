@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  CityDatabase
-//
-//  Created by Ryan Koda on 1/6/19.
-//  Copyright © 2019 Ryan Koda. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
