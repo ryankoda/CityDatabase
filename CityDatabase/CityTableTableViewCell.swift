@@ -1,24 +1,26 @@
-//
-//  CityTableTableViewCell.swift
-//  CityDatabase
-//
-//  Created by Ryan Koda on 1/6/19.
-//  Copyright © 2019 Ryan Koda. All rights reserved.
-//
-
 import UIKit
 
-class CityTableTableViewCell: UITableViewCell {
+class CityTableTableViewCell: UITableViewCell
+{
 
-    override func awakeFromNib() {
+    @IBOutlet weak var cellImage: UIImageView!
+    {
+        didSet
+        {
+            cellImage.layer.borderWidth = 1
+            cellImage.layer.masksToBounds = false
+            cellImage.clipsToBounds = true
+        }
+    }
+    @IBOutlet weak var cellName: UILabel!
+    override func awakeFromNib()
+    {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool)
+    {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
 }
