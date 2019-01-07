@@ -2,7 +2,6 @@ import UIKit
 
 class CityTableViewCell: UITableViewCell
 {
-
     @IBOutlet weak var cellImage: UIImageView!
     {
         didSet
@@ -13,6 +12,7 @@ class CityTableViewCell: UITableViewCell
         }
     }
     @IBOutlet weak var cellName: UILabel!
+    
     override func awakeFromNib()
     {
         super.awakeFromNib()
