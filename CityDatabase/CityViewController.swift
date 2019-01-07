@@ -64,4 +64,8 @@ class CityViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
         }
     }
+    @IBAction func mapUnwind(segue:UIStoryboardSegue)
+    {
+        
+    }
 }
