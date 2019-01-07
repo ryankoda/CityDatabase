@@ -48,6 +48,21 @@ class MapSearchViewController: UIViewController, MKMapViewDelegate
             }
         })
     }
+    @IBAction func showMap(_ sender: Any)
+    {
+        switch(mapType.selectedSegmentIndex)
+        {
+        case 0:
+            map.mapType = MKMapType.standard
+        case 1:
+            map.mapType = MKMapType.satellite
+        case 2:
+            map.mapType = MKMapType.hybrid
+        default:
+            map.mapType = MKMapType.standard
+        }
+    }
+    
     @IBAction func search(_ sender: Any)
     {
         if localSearch.text!.isEmpty

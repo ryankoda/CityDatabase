@@ -60,16 +60,6 @@ class CityViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         {
             if let viewController: MapSearchViewController = segue.destination as? MapSearchViewController
             {
-//                let x = cm.getCityObject(row:selectedIndex.row)
-//                viewController.tempRow = selectedIndex.row
-//                viewController.y = x
-//                //print(selectedIndex.row)
-//                viewController.tempName = x.cityName
-//                viewController.tempDescription = x.cityDescription
-//                if(x.cityImage != nil)
-//                {
-//                    viewController.tempImage = UIImage(data:x.cityImage as! Data,scale:1.0)
-//                }
                 viewController.selectedCity = cityName.text
             }
         }
