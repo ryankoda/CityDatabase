@@ -46,7 +46,7 @@
                                         <connections>
                                             <outlet property="cellImage" destination="R3k-d7-rkY" id="2yw-hp-dZL"/>
                                             <outlet property="cellName" destination="rSO-gf-O2F" id="gcV-Pd-3Ac"/>
-                                            <segue destination="lyK-uB-ldw" kind="show" id="wut-03-zc6"/>
+                                            <segue destination="lyK-uB-ldw" kind="show" identifier="cityView" id="wut-03-zc6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

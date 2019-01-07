@@ -79,5 +79,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cm.deleteAll()
         cityTable.reloadData()
     }
+    @IBAction func unwind(segue: UIStoryboardSegue)
+    {
+        cityTable.reloadData()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let selectedIndex:IndexPath = self.cityTable.indexPath(for:sender as! UITableViewCell)!
+        if (segue.identifier == "cityView")
+        {
+            if let viewController: CityViewController = segue.destination as? CityViewController
+            {
+                let x = cm.getCityObject(row:selectedIndex.row)
+                viewController.tempRow = selectedIndex.row
+                viewController.y = x
+                //print(selectedIndex.row)
+                viewController.tempName = x.cityName
+                viewController.tempDescription = x.cityDescription
+                if(x.cityImage != nil)
+                {
+                    viewController.tempImage = UIImage(data:x.cityImage as! Data,scale:1.0)
+                }
+            }
+        }
+    }
 }
 
