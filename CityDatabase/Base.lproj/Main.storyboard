@@ -286,17 +286,5 @@
             </objects>
             <point key="canvasLocation" x="124" y="-564.46776611694156"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Zxl-md-DeQ">
-            <objects>
-                <navigationController id="ZxU-N4-po3" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pnY-KI-mIy">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JON-eI-JrT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
 </document>
