@@ -15,7 +15,6 @@ public class CityModel
     }
     func addCity(name:String, description:String)
     {
-        
         // create a new entity object
         let ent = NSEntityDescription.entity(forEntityName: "City", in: self.managedObjectContext)
         //add to the manege object context

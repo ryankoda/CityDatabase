@@ -3,7 +3,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet weak var cityTable: UITableView!
-    
+    var cm:CityModel = CityModel()
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -42,5 +42,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     {
         return 100.0;
     }
+    @IBAction func addCity(_ sender: Any)
+    {
+        let alertController = UIAlertController(title: "Add New City", message: "", preferredStyle: UIAlertController.Style.alert)
+        alertController.addTextField { (textField: UITextField!) -> Void in
+            textField.placeholder = "Enter City Name"
+        }
+        alertController.addTextField { (textField: UITextField!) -> Void in
+            textField.placeholder = "Enter A Description"
+        }
+        let addAction = UIAlertAction(title: "Add", style: UIAlertAction.Style.default, handler: {alert-> Void in
+            let first = alertController.textFields![0].text!
+            let second = alertController.textFields![1].text!
+            if first.isEmpty || second.isEmpty
+            {
+                let alert2Controller = UIAlertController(title: "Add City Failed", message: "One or more text fields were empty", preferredStyle:UIAlertController.Style.alert)
+                let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
+                alert2Controller.addAction(okAction)
+                self.present(alert2Controller, animated:true, completion:nil)
+            }
+            else
+            {
+                self.cm.addCity(name:first, description:second)
+                self.cityTable.reloadData()
+            }
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action: UIAlertAction!) -> Void in })
+        alertController.addAction(addAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated:true, completion:nil)
+        cityTable.reloadData()
+    }
+    
 }
 
