@@ -53,4 +53,25 @@ class CityViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let imageData: NSData = cityImage.image!.pngData() as! NSData
         y!.cityImage = imageData
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if (segue.identifier == "mapView")
+        {
+            if let viewController: MapSearchViewController = segue.destination as? MapSearchViewController
+            {
+//                let x = cm.getCityObject(row:selectedIndex.row)
+//                viewController.tempRow = selectedIndex.row
+//                viewController.y = x
+//                //print(selectedIndex.row)
+//                viewController.tempName = x.cityName
+//                viewController.tempDescription = x.cityDescription
+//                if(x.cityImage != nil)
+//                {
+//                    viewController.tempImage = UIImage(data:x.cityImage as! Data,scale:1.0)
+//                }
+                viewController.selectedCity = cityName.text
+            }
+        }
+    }
 }

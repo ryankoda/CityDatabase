@@ -146,7 +146,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AYE-k2-MxS" kind="popoverPresentation" popoverAnchorView="4eS-bs-Rd4" id="bZc-Eg-5wB">
+                                    <segue destination="AYE-k2-MxS" kind="popoverPresentation" identifier="mapView" popoverAnchorView="4eS-bs-Rd4" id="bZc-Eg-5wB">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -184,14 +184,14 @@
                                     <segment title="Hybrid"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pY-2D-fgh">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pY-2D-fgh">
                                 <rect key="frame" x="166" y="90" width="135" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1x-vS-MXK">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1x-vS-MXK">
                                 <rect key="frame" x="166" y="119" width="135" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -227,6 +227,9 @@
                                 <state key="normal" title="Search">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="search:" destination="AYE-k2-MxS" eventType="touchUpInside" id="jkN-dF-CRm"/>
+                                </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MHr-HJ-LP9">
                                 <rect key="frame" x="0.0" y="196" width="375" height="471"/>
@@ -237,6 +240,13 @@
                         <viewLayoutGuide key="safeArea" id="PwJ-Bz-deH"/>
                     </view>
                     <navigationItem key="navigationItem" id="QVi-s7-1rX"/>
+                    <connections>
+                        <outlet property="latitude" destination="5pY-2D-fgh" id="6yW-2Q-O7L"/>
+                        <outlet property="localSearch" destination="8Uh-wz-eay" id="NXv-dS-BQw"/>
+                        <outlet property="longitude" destination="H1x-vS-MXK" id="Oym-cJ-ZQs"/>
+                        <outlet property="map" destination="MHr-HJ-LP9" id="4FQ-Ng-eFa"/>
+                        <outlet property="mapType" destination="bXk-IC-Mkl" id="M0A-rK-lvZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cY5-jz-SGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
