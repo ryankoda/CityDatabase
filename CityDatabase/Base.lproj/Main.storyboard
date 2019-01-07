@@ -121,11 +121,20 @@
                                 <state key="normal" title="Choose Picture">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChoosePicture:" destination="lyK-uB-ldw" eventType="touchUpInside" id="hOd-8N-NE7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wVo-pF-v6l"/>
                     </view>
+                    <connections>
+                        <outlet property="cityDescription" destination="wcQ-71-dij" id="N9h-5W-erb"/>
+                        <outlet property="cityImage" destination="52b-dN-H5U" id="sBY-aA-gEm"/>
+                        <outlet property="cityName" destination="1rZ-3H-IRQ" id="oig-hK-QK6"/>
+                        <outlet property="imageSource" destination="dXT-jR-aZY" id="dod-fE-cS7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fog-gQ-XTG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
