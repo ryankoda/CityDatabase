@@ -1,6 +1,6 @@
 import UIKit
 
-class CityTableTableViewCell: UITableViewCell
+class CityTableViewCell: UITableViewCell
 {
 
     @IBOutlet weak var cellImage: UIImageView!
