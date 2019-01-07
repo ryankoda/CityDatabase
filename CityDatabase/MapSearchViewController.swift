@@ -50,7 +50,47 @@ class MapSearchViewController: UIViewController, MKMapViewDelegate
     }
     @IBAction func search(_ sender: Any)
     {
-        
+        if localSearch.text!.isEmpty
+        {
+            //Do Nothing
+        }
+        else
+        {
+            map.removeAnnotations(map.annotations)
+            let request = MKLocalSearch.Request()
+            request.naturalLanguageQuery = self.localSearch.text
+            let span = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
+            request.region = self.map.region
+            print(request.region)
+            let search = MKLocalSearch(request: request)
+            search.start{response, _ in
+                guard let response = response else
+                {
+                    return
+                }
+                var matchingItems:[MKMapItem] = []
+                matchingItems = response.mapItems
+                if(matchingItems.isEmpty)
+                {
+                    //DO NOTHING
+                }
+                else
+                {
+                    for i in 0...matchingItems.count-1
+                    {
+                        //let place = matchingItems[i].placemark
+                        let temp = MKPointAnnotation()
+                        //temp.coordinate = place.location!.coordinate
+                        temp.coordinate = matchingItems[i].placemark.location!.coordinate
+                        //temp.title = place.name
+                        temp.title = matchingItems[i].placemark.name
+                        self.map.addAnnotation(temp)
+                        let array = [matchingItems[i].placemark.locality!, matchingItems[i].placemark.name!]
+                        print(array)
+                    }
+                }
+            }
+        }
     }
 }
 
