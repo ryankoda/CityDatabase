@@ -22,6 +22,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
             cell.cellImage.image = UIImage(data:rowdata.cityImage as! Data, scale:1.0)
         }
+        else
+        {
+            cell.cellImage.image = nil
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
@@ -103,6 +107,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 }
             }
         }
+        cityTable.reloadData()
     }
 }
 

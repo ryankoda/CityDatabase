@@ -17,10 +17,11 @@ public class CityModel
     {
         // create a new entity object
         let ent = NSEntityDescription.entity(forEntityName: "City", in: self.managedObjectContext)
-        //add to the manege object context
+        //add to the managed object context
         let newItem = City(entity: ent!, insertInto: self.managedObjectContext)
         newItem.cityName = name
         newItem.cityDescription = description
+        newItem.cityImage = nil
         
         // save the updated context
         do {
@@ -43,13 +44,25 @@ public class CityModel
     }
     func deleteAll()
     {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"City")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest:fetchRequest)
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"City")
+//        let deleteRequest = NSBatchDeleteRequest(fetchRequest:fetchRequest)
+//        do
+//        {
+//            try managedObjectContext.execute(deleteRequest)
+//            try managedObjectContext.save()
+//        } catch let _ as NSError{
+//        }
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "City")
+        fetchRequest.returnsObjectsAsFaults = false
         do
         {
-            try managedObjectContext.execute(deleteRequest)
-            try managedObjectContext.save()
-        } catch let _ as NSError{
-        }
+            let results = try managedObjectContext.fetch(fetchRequest)
+            for object in results
+            {
+                guard let objectData = object as? NSManagedObject else {continue}
+                managedObjectContext.delete(objectData)
+            }
+        } catch let error {}
     }
 }
