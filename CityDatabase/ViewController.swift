@@ -74,6 +74,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.present(alertController, animated:true, completion:nil)
         cityTable.reloadData()
     }
-    
+    @IBAction func deleteAll(_ sender: Any)
+    {
+        cm.deleteAll()
+        cityTable.reloadData()
+    }
 }
 

@@ -59,6 +59,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cities" id="CZU-NS-wk0">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="wIj-i8-KhD">
+                            <connections>
+                                <action selector="deleteAll:" destination="BYZ-38-t0r" id="unq-Io-79D"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xbi-bl-l1c">
                             <connections>
                                 <action selector="addCity:" destination="BYZ-38-t0r" id="lVT-hG-gKD"/>
