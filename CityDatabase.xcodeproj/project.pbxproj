@@ -17,6 +17,7 @@
 		E8E28D9021E2CD530025A7D0 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E28D8F21E2CD530025A7D0 /* CityModel.swift */; };
 		E8E28D9321E2CE400025A7D0 /* City+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E28D9121E2CE400025A7D0 /* City+CoreDataClass.swift */; };
 		E8E28D9421E2CE400025A7D0 /* City+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E28D9221E2CE400025A7D0 /* City+CoreDataProperties.swift */; };
+		E8E28D9621E2D3920025A7D0 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E28D9521E2D3920025A7D0 /* CityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E8E28D8F21E2CD530025A7D0 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		E8E28D9121E2CE400025A7D0 /* City+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E8E28D9221E2CE400025A7D0 /* City+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "City+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E8E28D9521E2D3920025A7D0 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				E8E28D8D21E2CB3E0025A7D0 /* CityTableViewCell.swift */,
 				E8E28D7821E2C73D0025A7D0 /* AppDelegate.swift */,
 				E8E28D7A21E2C73D0025A7D0 /* ViewController.swift */,
+				E8E28D9521E2D3920025A7D0 /* CityViewController.swift */,
 				E8E28D7C21E2C73D0025A7D0 /* Main.storyboard */,
 				E8E28D8221E2C73E0025A7D0 /* Assets.xcassets */,
 				E8E28D8421E2C73E0025A7D0 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				E8E28D9321E2CE400025A7D0 /* City+CoreDataClass.swift in Sources */,
 				E8E28D9021E2CD530025A7D0 /* CityModel.swift in Sources */,
 				E8E28D9421E2CE400025A7D0 /* City+CoreDataProperties.swift in Sources */,
+				E8E28D9621E2D3920025A7D0 /* CityViewController.swift in Sources */,
 				E8E28D8121E2C73D0025A7D0 /* CityDatabase.xcdatamodeld in Sources */,
 				E8E28D7B21E2C73D0025A7D0 /* ViewController.swift in Sources */,
 				E8E28D7921E2C73D0025A7D0 /* AppDelegate.swift in Sources */,
