@@ -48,6 +48,7 @@ class CityViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
+        // Save the chosen picture into the data structure
         picker .dismiss(animated:true, completion:nil)
         cityImage.image=info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         let imageData: NSData = cityImage.image!.pngData() as! NSData
@@ -64,6 +65,9 @@ class CityViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
         }
     }
+    
+    
+    // Segue that goes back to main page
     @IBAction func mapUnwind(segue:UIStoryboardSegue)
     {
         
